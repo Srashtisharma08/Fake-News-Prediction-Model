@@ -1,5 +1,6 @@
 # 📰 Fake News Prediction Model 🚦
 
+<<<<<<< HEAD
 ## Overview
 Welcome to the **Fake News Prediction Model** project! This repository provides a robust, production-ready solution for detecting fake news using advanced Natural Language Processing (NLP) and Machine Learning techniques. Built with Python, Flask, and scikit-learn, this project empowers users to verify the authenticity of news articles in real time.
 
@@ -156,4 +157,7 @@ This project is licensed under the MIT License.
 ---
 
 > **Built with ❤️ by [Your Name/Team] — April 2025**
+=======
+This is a Fake News Prediction Model that uses a Logistic Regression model to predict whether a given news article is fake or not. The model is trained on a dataset of 5000 news articles, and the accuracy of the model is 95.8%. 
+>>>>>>> 3c15b84fcbaa79c8fc4a81d2ec052a0a7a25d1d2
 
