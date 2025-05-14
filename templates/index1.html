@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Find What's Real! - Fake News Detection</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
   </head>
   <body>
     <header class="main-header">
@@ -14,9 +15,8 @@
             <div class="logo-icon"></div>
             <h1 class="logo-text">Find What's Real!</h1>
           </div>
-          <ul class="nav-links">
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#how-it-works" class="nav-link" data-tooltip="Our AI model analyzes news articles using advanced machine learning techniques to detect patterns and indicators of fake news">How it works</a></li>
+          <ul class="nav-links">            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#how-it-works" class="nav-link" data-tooltip="1. Input any news article URL&#10;2. Our AI model analyzes content using advanced ML techniques&#10;3. Get instant verification with detailed credibility score">How it works</a></li>
             <li><a href="#faq" class="nav-link">FAQ</a></li>
           </ul>
         </div>
@@ -29,10 +29,10 @@
     <main class="main-content">
       <section class="hero-section">
         <div class="hero-content">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/7ef3ee20087808b561ec82e16fe2b67635e6946b?placeholderIfAbsent=true&apiKey=a5c6ac0204e24ed2b0f1e4b69f96c348"
-            alt="Hero background image"
-            class="hero-background"
+          <img 
+            src="{{ url_for('static', filename='logo.jpg') }}"
+            alt="Find What's Real! Logo"
+            class="hero-logo hero-background"
           />
           <div class="hero-text">
             <h2 class="hero-title">Identify Fake News with Confidence!</h2>
@@ -75,10 +75,22 @@
         {% endif %}
         {% if result %}
         <div class="result-container">
-          <h3>Prediction Result:</h3>
+          <h3>Analysis Results:</h3>
           <div class="prediction-result {% if result == 'Fake News' %}fake{% else %}real{% endif %}">
             {{ result }}
           </div>
+          
+          {% if analysis %}
+          <div class="analysis-details">
+            <h4>Detailed Analysis:</h4>
+            <ul class="analysis-list">
+              <li>Credibility Score: <span class="score">{{ analysis.credibility_score }}</span></li>
+              <li>Quality Score: <span class="score">{{ analysis.quality_score }}</span></li>
+              <li>Confidence Level: <span class="confidence-{{ analysis.confidence.lower() }}">{{ analysis.confidence }}</span></li>
+            </ul>
+          </div>
+          {% endif %}
+
           {% if text_preview %}
           <div class="text-preview">
             <h4>Article Preview:</h4>
@@ -158,6 +170,71 @@
           <button class="fake-button" aria-label="Mark as fake">Fake</button>
         </div>
       </section>
+
+      <!-- Login Modal -->
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Login to Find What's Real!</h2>
+          <form id="loginForm" class="login-form">
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-submit-btn">Login</button>
+            <div class="separator">
+              <span>or</span>
+            </div>
+            <div id="g_id_onload"
+                 data-client_id="YOUR_GOOGLE_CLIENT_ID"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin google-btn"
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="filled_dark"
+                 data-text="sign_in_with"
+                 data-shape="rectangular"
+                 data-logo_alignment="left">
+            </div>
+            <p class="signup-text">Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Signup Modal -->
+      <div id="signupModal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Create an Account</h2>
+          <form id="signupForm" class="login-form">
+            <div class="form-group">
+              <input type="text" id="fullName" placeholder="Full Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="signupEmail" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <input type="password" id="signupPassword" placeholder="Password" required>
+            </div>
+            <button type="submit" class="login-submit-btn">Sign Up</button>
+            <div class="separator">
+              <span>or</span>
+            </div>
+            <div class="g_id_signin google-btn"
+                 data-type="standard"
+                 data-size="large"
+                 data-theme="filled_dark"
+                 data-text="signup_with"
+                 data-shape="rectangular"
+                 data-logo_alignment="left">
+            </div>
+            <p class="signup-text">Already have an account? <a href="#" id="showLogin">Login</a></p>
+          </form>
+        </div>
+      </div>
 
       <footer class="main-footer">
         <div class="footer-links">

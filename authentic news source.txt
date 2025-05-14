@@ -1,0 +1,323 @@
+timesofindia.indiatimes.com
+
+thehindu.com
+
+indianexpress.com
+
+hindustantimes.com
+
+ndtv.com
+
+news18.com
+
+indiatoday.in
+
+theprint.in
+
+business-standard.com
+
+livemint.com
+
+deccanherald.com
+
+thewire.in
+
+scroll.in
+
+firstpost.com
+
+thequint.com
+
+outlookindia.com
+
+tribuneindia.com
+
+telegraphindia.com
+
+asianage.com
+
+newslaundry.com
+
+rediff.com
+
+dnaindia.com
+
+theweek.in
+
+swarajyamag.com
+
+opindia.com (noted: right-leaning, for spectrum balance)
+
+Major Hindi & Regional Language News Outlets
+aajtak.in
+
+amarujala.com
+
+bhaskar.com
+
+jagran.com
+
+patrika.com
+
+navbharattimes.indiatimes.com
+
+zeenews.india.com/hindi
+
+ndtv.in
+
+news18hindi.com
+
+livehindustan.com
+
+prabhatkhabar.com
+
+loksatta.com (Marathi)
+
+maharashtratimes.com (Marathi)
+
+eenadu.net (Telugu)
+
+manoramaonline.com (Malayalam)
+
+mathrubhumi.com (Malayalam)
+
+dinamalar.com (Tamil)
+
+dinamani.com (Tamil)
+
+kannadaprabha.com (Kannada)
+
+uttarbangasambad.com (Bengali)
+
+anandabazar.com (Bengali)
+
+gujaratsamachar.com (Gujarati)
+
+divyabhaskar.co.in (Gujarati)
+
+punjabkesari.in (Punjabi)
+
+5dariyanews.com (Punjabi, Hindi, English)
+
+kashmirnews.in (English, Urdu)
+
+Television & Digital News Networks
+ndtv.com
+
+news18.com
+
+aajtak.in
+
+zeenews.india.com
+
+indiatvnews.com
+
+cnnnews18.com
+
+timesnownews.com
+
+republicworld.com
+
+wionews.com
+
+sunnewsonline.com (South India, multiple languages)
+
+News Agencies
+pti.in (Press Trust of India)
+
+ani.in (Asian News International)
+
+ians.in (Indo-Asian News Service)
+
+uniindia.com (United News of India)
+
+Public Broadcasters
+newsonair.gov.in (All India Radio)
+
+doordarshan.gov.in
+
+ddnews.gov.in
+
+prasarbharati.gov.in
+
+Fact-Checking & Investigative
+altnews.in
+
+boomlive.in
+
+factchecker.in
+
+smhoaxslayer.com
+
+newschecker.in
+
+indiacheck.org
+
+Business & Finance
+moneycontrol.com
+
+business-standard.com
+
+economictimes.indiatimes.com
+
+livemint.com
+
+financialexpress.com
+
+cnbctv18.com
+
+Regional/Local News Portals
+chandigarhmetro.com
+
+chandigarhcitynews.com
+
+bangaloremirror.indiatimes.com
+
+mumbaimirror.indiatimes.com
+
+delhitimes.com
+
+deccanchronicle.com
+
+goanews.com
+
+ranchiexpress.com
+
+thegoan.net
+
+nagpurtoday.in
+
+punemirror.indiatimes.com
+
+Magazines & Weekly Publications
+outlookindia.com
+
+theweek.in
+
+frontline.thehindu.com
+
+tehelka.com
+
+caravanmagazine.in
+
+indiafacts.org
+
+Government News & Official Updates
+pib.gov.in (Press Information Bureau)
+
+mygov.in
+
+indianrailways.gov.in/news
+
+
+reuters.com
+
+apnews.com
+
+afp.com
+
+bloomberg.com
+
+dpa-international.com
+
+efe.com (Spanish/Global)
+
+kyodonews.jp (Japanese/English)
+
+xinhuanet.com (Chinese/English)
+
+North America
+nytimes.com
+
+washingtonpost.com
+
+wsj.com
+
+npr.org
+
+cbc.ca (Canada)
+
+theglobeandmail.com (Canada)
+
+mexiconewsdaily.com (Mexico)
+
+Europe
+bbc.com (UK/50 languages)
+
+theguardian.com (UK)
+
+dw.com (Germany/32 languages)
+
+lemonde.fr (France)
+
+elpais.com (Spain)
+
+ansa.it (Italy)
+
+tass.com (Russia/English)
+
+Asia-Pacific
+scmp.com (Hong Kong)
+
+japantimes.co.jp
+
+koreatimes.co.kr
+
+thehindu.com (India)
+
+straitstimes.com (Singapore)
+
+abc.net.au/news (Australia)
+
+rnz.co.nz (New Zealand)
+
+Middle East
+aljazeera.com (Qatar/Arabic/English)
+
+haaretz.com (Israel)
+
+thenationalnews.com (UAE)
+
+arabnews.com (Saudi Arabia)
+
+dailysabah.com (Turkey)
+
+Africa
+allafrica.com
+
+nation.africa (Kenya)
+
+dailymaverick.co.za (South Africa)
+
+premiumtimesng.com (Nigeria)
+
+apanews.net (Francophone Africa)
+
+Latin America
+folha.uol.com.br (Brazil)
+
+lanacion.com.ar (Argentina)
+
+eluniversal.com.mx (Mexico)
+
+elespectador.com (Colombia)
+
+elcomercio.pe (Peru)
+
+Multilingual Platforms
+france24.com (French/Arabic/English/Spanish)
+
+euronews.com (12 languages)
+
+rtve.es (Spanish/Global)
+
+nhk.or.jp/nhkworld (Japanese/18 languages)
+
+Specialist/Investigative
+propublica.org
+
+icij.org (International Consortium)
+
+opendemocracy.net
+
+theconversation.com 

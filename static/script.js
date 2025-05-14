@@ -1,13 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Elements
-  const urlForm = document.getElementById("urlForm");
-  const urlInput = document.getElementById("urlInput");
-  const loadingSpinner = document.getElementById("loadingSpinner");
-  const errorMessage = document.getElementById("errorMessage");
-  const successMessage = document.getElementById("successMessage");
-  const verifyButton = document.querySelector('button:contains("Verify")');
-  const realButton = document.querySelector('button:contains("Real")');
-  const fakeButton = document.querySelector('button:contains("Fake")');
+  const urlForm = document.getElementById("prediction-form");
+  const urlInput = document.querySelector('.url-input');
+  const heroVerifyButton = document.querySelector('.hero-buttons .verify-button');
+  const heroLearnMoreButton = document.querySelector('.hero-buttons .learn-more-button');
+  const urlInputSection = document.querySelector('.url-input-section');
+
+  // Smooth scroll function
+  const smoothScroll = (element) => {
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center'
+    });
+  };
+
+  // Add pulse animation to URL input
+  const addPulseToInput = () => {
+    urlInput.classList.add('pulse-animation');
+    setTimeout(() => {
+      urlInput.classList.remove('pulse-animation');
+    }, 1000);
+  };
+
+  // Hero Verify button click handler
+  heroVerifyButton.addEventListener('click', () => {
+    smoothScroll(urlInputSection);
+    addPulseToInput();
+    urlInput.focus();
+  });
+
+  // Learn More button click handler
+  heroLearnMoreButton.addEventListener('click', () => {
+    const featuresSection = document.querySelector('.features-section');
+    if (featuresSection) {
+      smoothScroll(featuresSection);
+    }
+  });
 
   // State
   let isLoading = false;
@@ -174,4 +202,121 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
+
+  // Login Modal Elements
+  const loginButton = document.querySelector('.login-button');
+  const loginModal = document.getElementById('loginModal');
+  const signupModal = document.getElementById('signupModal');
+  const closeButtons = document.querySelectorAll('.close-modal');
+  const showSignupLink = document.getElementById('showSignup');
+  const showLoginLink = document.getElementById('showLogin');
+  const loginForm = document.getElementById('loginForm');
+  const signupForm = document.getElementById('signupForm');
+
+  // Modal Functions
+  function openModal(modal) {
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal(modal) {
+    modal.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function closeAllModals() {
+    [loginModal, signupModal].forEach(modal => closeModal(modal));
+  }
+
+  // Event Listeners
+  loginButton.addEventListener('click', () => openModal(loginModal));
+
+  closeButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      closeAllModals();
+    });
+  });
+
+  showSignupLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal(loginModal);
+    openModal(signupModal);
+  });
+
+  showLoginLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    closeModal(signupModal);
+    openModal(loginModal);
+  });
+
+  // Close modal when clicking outside
+  window.addEventListener('click', (e) => {
+    if (e.target === loginModal || e.target === signupModal) {
+      closeAllModals();
+    }
+  });
+
+  // Handle Google Sign-in Response
+  window.handleCredentialResponse = async (response) => {
+    try {
+      // Here you would verify the credential with your backend
+      const credential = response.credential;
+      
+      // For demo purposes, just log the user in
+      const userData = JSON.parse(atob(credential.split('.')[1]));
+      console.log('Logged in user:', userData.name);
+      
+      // Update UI for logged-in state
+      loginButton.textContent = userData.name;
+      closeAllModals();
+      
+      // You can add more UI updates here
+      
+    } catch (error) {
+      console.error('Error processing Google sign-in:', error);
+      alert('Failed to process Google sign-in. Please try again.');
+    }
+  };
+
+  // Form Submissions
+  loginForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      // Here you would make an API call to your backend
+      console.log('Login attempt:', { email });
+      
+      // For demo purposes
+      alert('Login successful!');
+      closeAllModals();
+      loginButton.textContent = email.split('@')[0];
+      
+    } catch (error) {
+      console.error('Login error:', error);
+      alert('Login failed. Please try again.');
+    }
+  });
+
+  signupForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('signupEmail').value;
+    const password = document.getElementById('signupPassword').value;
+
+    try {
+      // Here you would make an API call to your backend
+      console.log('Signup attempt:', { fullName, email });
+      
+      // For demo purposes
+      alert('Account created successfully! Please log in.');
+      closeModal(signupModal);
+      openModal(loginModal);
+      
+    } catch (error) {
+      console.error('Signup error:', error);
+      alert('Failed to create account. Please try again.');
+    }
+  });
 });
