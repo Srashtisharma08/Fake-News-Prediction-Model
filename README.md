@@ -1,6 +1,5 @@
 # 📰 Fake News Prediction Model 🚦
 
-<<<<<<< HEAD
 ## Overview
 Welcome to the **Fake News Prediction Model** project! This repository provides a robust, production-ready solution for detecting fake news using advanced Natural Language Processing (NLP) and Machine Learning techniques. Built with Python, Flask, and scikit-learn, this project empowers users to verify the authenticity of news articles in real time.
 
